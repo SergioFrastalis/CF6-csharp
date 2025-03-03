@@ -1,0 +1,17 @@
+﻿@page
+@model WebAppStarter.Pages.Students.SuccessModel
+@{
+	ViewData["Title"] = "Success";
+}
+
+<div class="container">
+	<div class="nt-4 p-5 bg-success rounded">
+		<span class="display-3 text-white">Syccess!</span>
+
+		<hr />
+		<p>
+			@Model.Message
+		</p>
+		<a asp-page="/Students/Index" class="btn btn-primary">Back to Form</a>
+	</div>
+</div>

@@ -20,6 +20,8 @@ namespace WebAppStarter
             }
 
             app.UseHttpsRedirection();
+
+            app.UseDefaultFiles();
             app.UseStaticFiles();
 
             app.UseRouting();
@@ -28,7 +30,11 @@ namespace WebAppStarter
 
             app.MapRazorPages();
 
+            app.MapGet("/hello", () => "Hello world!");
+
             app.Run();
+
+            Console.WriteLine("The application has been shut down.");
         }
     }
 }
